@@ -19,7 +19,7 @@ class MAPumpkinFarms::CLI
   
   def get_user_state
     chosen_state = gets.strip
-    show_farms_for(chosen_state) if valid_input(chosen_state, @states)        #if valid input, show list of farms
+    show_farms_for(chosen_state) if valid_input?(chosen_state, @states)        #if valid input, show list of farms
   end
   
   def valid_input?(input, data)
