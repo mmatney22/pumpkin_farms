@@ -9,12 +9,13 @@ class MAPumpkinFarms::CLI
   
   def get_states
     #needs to be scraped
-    @states = ['CT', 'ME', 'MA', 'NH', 'RI', 'VT']
+    MAPumpkinFarms::State.new("Vermont")
+    @states = MAPumpkinFarms::State.all
   end
   
   def list_states
     puts "Choose a state to see a list of pumpkin farms."
-    @states.each.with_index(1) {|state, index| puts "#{index}. #{state}"}    #iterates over array, and lists states
+    @states.each.with_index(1) {|state, index| puts "#{index}. #{state.name}"}    #iterates over array, and lists states
   end
   
   def get_user_state
