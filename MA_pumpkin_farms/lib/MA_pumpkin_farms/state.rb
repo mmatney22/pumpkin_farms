@@ -8,6 +8,7 @@ class MAPumpkinFarms::State
   end
   
   def self.all
+    MAPumpkinFarms::Scraper.scrape_states if @@all.empty?
     @@all
   end
   

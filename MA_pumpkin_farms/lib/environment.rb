@@ -5,6 +5,7 @@ require_relative "./MA_pumpkin_farms/scraper"
 
 require 'pry'
 require 'nokogiri'
+require 'open-uri'
 
 
 module MAPumpkinFarms
