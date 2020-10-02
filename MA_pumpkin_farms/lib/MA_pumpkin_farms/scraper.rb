@@ -1,4 +1,4 @@
-class MAPumpkinFarms::CLI
+class MAPumpkinFarms::Scraper
   @@all = []
 
   def self.scrape_states

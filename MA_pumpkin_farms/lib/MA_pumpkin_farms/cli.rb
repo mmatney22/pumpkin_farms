@@ -8,9 +8,8 @@ class MAPumpkinFarms::CLI
   end
   
   def get_states
-    #needs to be scraped
-    MAPumpkinFarms::State.new("Vermont")
-    @states = MAPumpkinFarms::State.all
+                
+    @states = MAPumpkinFarms::State.all             #sets variable to all array, containing state objects
   end
   
   def list_states
@@ -29,7 +28,7 @@ class MAPumpkinFarms::CLI
   
   def list_farms_for(chosen_state)
     state = @states[chosen_state - 1]              #set variable to array item of @state, minus 1 for correct index
-    puts "Here are pumpkin farms located in #{state.name}"
+    puts "Here are pumpkin farms located in #{state.name}:"
     # MAPumpkinFarms::Farm.all.each.with_index(1) do |farm|       #go thru all farms and lists them
     #   puts farm.name
     # end
