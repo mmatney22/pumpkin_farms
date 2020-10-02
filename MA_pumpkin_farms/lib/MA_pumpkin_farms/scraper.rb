@@ -1,0 +1,3 @@
+class MAPumpkinFarms::CLI
+
+end
