@@ -1,7 +1,5 @@
 class MAPumpkinFarms::Farm
-  attr_accessor :name 
-  attr_writer :info
-  
+  attr_accessor :name, :info
   @@all =[]
   
   def initialize(name)
@@ -16,7 +14,7 @@ class MAPumpkinFarms::Farm
   end
   
   def info
-    MAPumpkinFarms::Scraper.scrape_info(farm) if @info.empty?
+    MAPumpkinFarms::Scraper.scrape_info(self) if @info.empty?
     @info
   end
   
