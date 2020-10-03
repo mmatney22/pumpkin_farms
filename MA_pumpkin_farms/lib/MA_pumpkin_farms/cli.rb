@@ -34,7 +34,4 @@ class MAPumpkinFarms::CLI
     #get_user_farm
   end
   
-  #get_user_farm
-  
-  #list_activities
 end

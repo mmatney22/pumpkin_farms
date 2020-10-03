@@ -1,5 +1,9 @@
 class MAPumpkinFarms::Scraper
   @@all = []
+  
+  def self.all 
+    @@all 
+  end
 
   def self.scrape_farms
     doc = Nokogiri::HTML(open("http://newenglandfallevents.com/massachusetts/pumpkin-patches/")) 
@@ -12,8 +16,8 @@ class MAPumpkinFarms::Scraper
     end
   end
   
-  def self.all 
-    @@all 
+  def scrape_info(farm)
+    
   end
   
 end
