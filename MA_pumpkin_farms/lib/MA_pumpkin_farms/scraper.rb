@@ -6,7 +6,9 @@ class MAPumpkinFarms::Scraper
     
     farms = doc.css("#listings tr")[1..38]
     
-    things.each do {|thing| puts thing.css("a")[0].text}
+    farms.each do |farm| 
+      puts farm.css("a")[0].text
+    end
   end
   
   def self.all 
