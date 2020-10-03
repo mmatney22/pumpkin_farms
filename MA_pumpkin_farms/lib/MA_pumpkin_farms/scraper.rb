@@ -2,7 +2,7 @@ class MAPumpkinFarms::Scraper
   @@all = []
 
   def self.scrape_farms
-    doc = Nokogiri::HTML(open("http://newenglandfallevents.com/")) 
+    doc = Nokogiri::HTML(open("http://newenglandfallevents.com/massachusetts/pumpkin-patches/")) 
     
     farms = doc.css("#listings tr")[1..38]
     
