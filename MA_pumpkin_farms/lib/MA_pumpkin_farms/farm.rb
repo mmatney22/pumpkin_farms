@@ -1,4 +1,4 @@
-class MAPumpkinFarms::State
+class MAPumpkinFarms::Farm
   attr_accessor :name
   @@all =[]
   
@@ -8,7 +8,7 @@ class MAPumpkinFarms::State
   end
   
   def self.all
-    MAPumpkinFarms::Scraper.scrape_states if @@all.empty?
+    MAPumpkinFarms::Scraper.scrape_farms if @@all.empty?
     @@all
   end
   
