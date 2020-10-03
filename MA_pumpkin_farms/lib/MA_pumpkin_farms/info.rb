@@ -1,12 +1,11 @@
 class MAPumpkinFarms::Info
   attr_accessor :name, :farm, :address, :phone_number
-  attr_writer :info
-  
   @@all =[]
   
   def initialize(name, farm)
     @name = name
     @farm = farm
+    @farm.info << self
     save
   end
   
