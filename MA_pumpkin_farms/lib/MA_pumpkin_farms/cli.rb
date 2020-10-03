@@ -8,13 +8,12 @@ class MAPumpkinFarms::CLI
   end
   
   def get_farms
-                
-    @farms = MAPumpkinFarms::Farm.all             #sets variable to all array, containing state objects
+    @farms = MAPumpkinFarms::Farm.all             #sets variable to all array, containing farm objects
   end
   
   def list_farms
-    puts "Choose a state to see a list of pumpkin farms."
-    @states.each.with_index(1) {|farm, index| puts "#{index}. #{farm.name}"}    #iterates over array, and lists states
+    puts "Choose a farm to see more information:"
+    @farms.each.with_index(1) {|farm, index| puts "#{index}. #{farm.name}"}    #iterates over array, and lists farms
   end
   
   def get_user_farm
