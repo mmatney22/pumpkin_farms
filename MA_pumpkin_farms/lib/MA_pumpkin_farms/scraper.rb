@@ -16,9 +16,9 @@ class MAPumpkinFarms::Scraper
     end
   end
   
-  def self.scrape_info(farm)
-    MAPumpkinFarms::Info.new("cool info", farm)
-    MAPumpkinFarms::Info.new("uncool info", farm)  
-  end
+  # def self.scrape_info(farm)
+  #   MAPumpkinFarms::Info.new("cool info", farm)
+  #   MAPumpkinFarms::Info.new("uncool info", farm)  
+  # end
   
 end

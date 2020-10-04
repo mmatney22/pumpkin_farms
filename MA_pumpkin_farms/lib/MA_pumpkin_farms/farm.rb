@@ -1,10 +1,10 @@
 class MAPumpkinFarms::Farm
-  attr_accessor :name, :info
+  attr_accessor :name, :address, :phone, :url, :info
   @@all =[]
   
-  def initialize(name)
+  def initialize(name=nil, url=nil)
     @name = name
-    @info = []
+    @url = url
     save
   end
   
