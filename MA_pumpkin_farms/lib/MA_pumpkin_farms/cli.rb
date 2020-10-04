@@ -29,11 +29,9 @@ class MAPumpkinFarms::CLI
     farm = @farms[chosen_farm - 1] 
     farm.get_info                               #set variable to array item of @state, minus 1 for correct index
     puts "Here is info for #{farm.name}:"
-    binding.pry
-    # MAPumpkinFarms::Info.all.each.with_index(1) do |i|       #go thru all farms and lists info
-    #   puts i.name
-    # end
-    #get_user_farm
+    farm.info.all.each.with_index(1) do |info, index|       #go thru all farms and lists info
+      puts "#{index}. #{i.name}"
+    end
   end
   
 end
