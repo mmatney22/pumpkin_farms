@@ -13,7 +13,7 @@ class MAPumpkinFarms::Farm
     @@all
   end
   
-  def info
+  def get_info
     MAPumpkinFarms::Scraper.scrape_info(self) if @info.empty?
     @info
   end
