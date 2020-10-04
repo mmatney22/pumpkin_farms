@@ -14,7 +14,7 @@ class MAPumpkinFarms::Farm
   end
   
   def address
-    MAPumpkinFarms::Scraper.scrape_info(self) if @adress.empty?
+    MAPumpkinFarms::Scraper.scrape_info(self) if @address.empty?
     @address
   end
   
