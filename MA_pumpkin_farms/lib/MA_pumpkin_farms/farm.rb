@@ -1,5 +1,5 @@
 class MAPumpkinFarms::Farm
-  attr_accessor :name, :address, :phone, :url, :info
+  attr_accessor :name, :address, :phone, :url
   @@all =[]
   
   def initialize(name=nil, url=nil)
@@ -14,7 +14,7 @@ class MAPumpkinFarms::Farm
   end
   
   def address
-    MAPumpkinFarms::Scraper.scrape_info(self) if @address.empty?
+    MAPumpkinFarms::Scraper.get_address(self) if @address.empty?
     @address
   end
   
