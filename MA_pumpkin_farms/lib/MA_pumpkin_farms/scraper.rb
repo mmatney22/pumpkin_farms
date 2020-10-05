@@ -21,7 +21,7 @@ class MAPumpkinFarms::Scraper
     doc = Nokogiri::HTML(open("#{basepath + farm.url}"))
     address= doc.css("div.authorName__container a span").text
     phone = doc.css("div.readable.stacked.gcaBookDescription").text.strip
-    farm.adress = adress
+    farm.address = address
     farm.phone = phone
   end
   
